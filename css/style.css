@@ -1098,6 +1098,8 @@ body._lock {
   position: relative;
   padding-bottom: 105%;
   width: 100%;
+  overflow: hidden;
+  cursor: pointer;
 }
 .item-destination__image img {
   position: absolute;
@@ -1107,6 +1109,10 @@ body._lock {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.5s ease 0s;
+}
+.item-destination__image:hover img {
+  transform: scale(1.3);
 }
 .item-destination__description {
   font-weight: 500;
@@ -2147,4 +2153,26 @@ body._lock {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.go-top {
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+  bottom: 60px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(189, 235, 243, 0.1764705882);
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+}
+.go-top img {
+  max-width: 100%;
+}
+.go-top.active {
+  opacity: 1;
+  visibility: visible;
 }

@@ -136,13 +136,30 @@ document.addEventListener('scroll', function headerSetBackground(){
   } else{
     header.classList.remove('bg');
   }
-  initialYValue = windowScrollTop;
+ 
 });
 
 
-
-
-
+//  кнопка НАВЕРХ
+ const scrollBtn = document.querySelector('.go-top'); // получаем в константу нашу кнопку
+ // если проскроллить более чем на высоту окна, то добавляем кнопке класс active(показываем кнопку)
+window.addEventListener('scroll', function(){
+   if(window.scrollY>window.innerHeight){
+    scrollBtn.classList.add('active');
+  }
+  else{
+    scrollBtn.classList.remove('active');
+  }
+})
+//  функция прокрутки страницы в самый верх (метод window.scrollTo(x,y)(можно передать объект с параметрами))
+function scrollTopTop(){
+window.scrollTo( {
+  top:0,
+  behavior:'smooth'
+}
+  )
+}
+scrollBtn.addEventListener('click', scrollTopTop);
 
 
 
