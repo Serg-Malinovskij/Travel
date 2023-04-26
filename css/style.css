@@ -2163,11 +2163,18 @@ body._lock {
   right: 40px;
   width: 40px;
   height: 40px;
-  background-color: rgba(189, 235, 243, 0.1764705882);
   border-radius: 50%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease 0s;
+}
+@media (max-width: 479.98px) {
+  .go-top {
+    right: 15px;
+  }
+}
+.go-top:hover {
+  background-color: rgba(26, 205, 236, 0.9921568627);
 }
 .go-top img {
   max-width: 100%;
